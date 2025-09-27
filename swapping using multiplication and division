@@ -1,0 +1,13 @@
+1. swapping using multiplication and division
+
+public class Main{
+    public static void main(String[] args){
+     int a=10;
+    int b=20;
+    a=a*b;//-10
+    b=a/b;//30
+    a=a/b;
+    
+    System.out.println(a+" "+b);
+    }
+}
