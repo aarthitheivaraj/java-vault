@@ -1,0 +1,29 @@
+1. sum of odd and even numbers
+
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		    int size=scan.nextInt();
+		    
+		    int arr[]=new int[size];
+		    int oddsum=0,evensum=0;
+		    for(int i=0;i<size;i++){
+		        arr[i]=scan.nextInt();
+		        if(arr[i]%2==0){
+		            evensum=evensum+arr[i];
+		        }
+		        else{
+		            oddsum=oddsum+arr[i];
+		        }
+		    }
+		        System.out.println((oddsum>evensum)?oddsum+evensum:evensum+oddsum);
+		        
+		    
+	}
+		    
+	}     
+
+
