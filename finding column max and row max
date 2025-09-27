@@ -1,0 +1,47 @@
+1 .finding column max and row max:
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan=new Scanner(System.in);
+	    int rsize=scan.nextInt();
+	    int csize=scan.nextInt();
+	    int arr[][]=new int[rsize][csize];
+	    for(int i=0;i<rsize;i++){
+	        for(int j=0;j<csize;j++){
+	            arr[i][j]=scan.nextInt();
+	        }
+	       
+	        }
+	        int rmax=Integer.MIN_VALUE,cmax=Integer.MIN_VALUE;
+	        int row,col;
+	        
+	        for(int i=0;i<rsize;i++){
+	            row=0;
+	            col=0;
+	            
+	            for(int j=0;j<csize;j++){
+	                row=row+arr[i][j];
+	                col=col+arr[j][i];
+	                
+	            }
+	            if(row>rmax){
+	                rmax=row;
+	                
+	            
+	                    
+	                }
+	                if(col>cmax){
+	                    cmax=col;
+	                }
+	            }
+	            
+	        
+	        System.out.println(cmax+" "+rmax);
+	        
+}  
+	        
+	
+}
+	
