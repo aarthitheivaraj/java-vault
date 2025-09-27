@@ -24,5 +24,298 @@ public class Main
 		    
 	}
 		    
-	}      
+	}     
+
+2. Inserting element in specific position using array:
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		    int size=scan.nextInt();
+		    
+		    int arr[]=new int[size+1];
+		    
+		    for(int i=0;i<size;i++){
+		        arr[i]=scan.nextInt();
+		        
+	}
+	int pos=scan.nextInt();
+	if(pos<0||pos>size+1){
+	    System.out.println("Invalid");
+	}
+	else{
+	    int element=scan.nextInt();
+	    for(int i=size;i>pos;i--){
+	        arr[i]=arr[i-1];
+	        
+	    }
+	    arr[pos]=element;
+	    
+	}
+	for(int x:arr){
+	    System.out.print(x+" ");
+	}
+		    
+	} 
+}
+	
+
+3. searching the value
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		int size=scan.nextInt();
+		int arr[]=new int[size];
+		for(int i=0;i<size;i++){
+		    arr[i]=scan.nextInt();
+		}
+		    int searchdata=scan.nextInt();
 		
+		    for(int i=0;i<size;i++){
+		        if(arr[i]==searchdata){
+		            System.out.println(i);
+		            return;
+		        }
+		    }
+		    
+		    System.out.print("-1");
+		}
+}
+	
+	
+4.sorting
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		int size=scan.nextInt();
+		int arr[]=new int[size];
+		for(int i=0;i<size;i++){
+		    arr[i]=scan.nextInt();
+		}
+		for(int i=0;i<size;i++){
+		    for(int j=i+1;j<size;j++){
+		        if(arr[i]>arr[j]){
+		            int temp=arr[i];
+		            arr[i]=arr[j];
+		            arr[j]=temp;
+		            
+		        }
+		    }
+		}
+		for(int x:arr){
+		    System.out.print(x+" ");
+		}
+}
+}
+
+5. Swapping with adjancency elements:
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		int size=scan.nextInt();
+		int arr[]=new int[size];
+		for(int i=0;i<size;i++){
+		    arr[i]=scan.nextInt();
+		}
+		for(int i=0;i<size-1;i=i+2){
+		       
+		            int temp=arr[i];
+		            
+		            arr[i]=arr[i+1];
+		            arr[i+1]=temp;
+		    
+		}
+		for(int x:arr){
+		    System.out.print(x+" ");
+		}
+}
+}
+
+6.Finding odd and even index and swap:
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		int size=scan.nextInt();
+	
+		int arr[]=new int[size];
+		for(int i=0;i<size;i++){
+		    arr[i]=scan.nextInt();
+		}
+		
+		for(int i=0;i<size-2;i=i+2){
+		    int temp=arr[i];
+		    arr[i]=arr[i+2];
+		    arr[i+2]=temp;
+		    
+		}
+		for(int i=1;i<size-2;i=i+2){
+		    int temp=arr[i];
+		    arr[i]=arr[i+2];
+		    arr[i+2]=temp;
+		    
+	}
+	for(int x:arr){
+	    System.out.print(x+" ");
+	}
+	}
+}
+	
+ii).
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		int size=scan.nextInt();
+	
+		int arr[]=new int[size];
+		for(int i=0;i<size;i++){
+		    arr[i]=scan.nextInt();
+		}
+		
+		for(int i=0;i<size-2;i=i+4){
+		    int temp=arr[i];
+		    arr[i]=arr[i+2];
+		    arr[i+2]=temp;
+		    
+		}
+		for(int i=1;i<size-2;i=i+4){
+		    int temp=arr[i];
+		    arr[i]=arr[i+2];
+		    arr[i+2]=temp;
+		    
+	}
+	for(int x:arr){
+	    System.out.print(x+" ");
+	}
+	}
+}	   
+		
+	
+7.2 dimenstional array
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan=new Scanner(System.in);
+	    int rsize=scan.nextInt();
+	    int csize=scan.nextInt();
+	    int arr[][]=new int[rsize][csize];
+	    for(int i=0;i<rsize;i++){
+	        for(int j=0;j<csize;j++){
+	            arr[i][j]=scan.nextInt();
+	        }
+	        }
+	        for(int i=0;i<rsize;i++){
+	            for(int j=0;j<csize;j++){
+	                System.out.print(arr[i][j]+" ");
+	            }
+                   System.out.println();
+	        }
+	}
+}
+
+8. using 2D array adding edges:
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan=new Scanner(System.in);
+	    int rsize=scan.nextInt();
+	    int csize=scan.nextInt();
+	    int arr[][]=new int[rsize][csize];
+	    for(int i=0;i<rsize;i++){
+	        for(int j=0;j<csize;j++){
+	            arr[i][j]=scan.nextInt();
+	        }
+	       
+	        }
+	        int sum=0;
+	        for(int i=0;i<rsize;i++){
+	            for(int j=0;j<csize;j++){
+	                if(i==0||j==0||i==rsize-1||j==csize-1){
+	                    sum=sum+arr[i][j];
+	                    
+	                }
+	            }
+	        }
+	        System.out.println(sum);
+	        
+}  
+	        
+	
+}
+	
+
+9.finding column max and row max:
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan=new Scanner(System.in);
+	    int rsize=scan.nextInt();
+	    int csize=scan.nextInt();
+	    int arr[][]=new int[rsize][csize];
+	    for(int i=0;i<rsize;i++){
+	        for(int j=0;j<csize;j++){
+	            arr[i][j]=scan.nextInt();
+	        }
+	       
+	        }
+	        int rmax=Integer.MIN_VALUE,cmax=Integer.MIN_VALUE;
+	        int row,col;
+	        
+	        for(int i=0;i<rsize;i++){
+	            row=0;
+	            col=0;
+	            
+	            for(int j=0;j<csize;j++){
+	                row=row+arr[i][j];
+	                col=col+arr[j][i];
+	                
+	            }
+	            if(row>rmax){
+	                rmax=row;
+	                
+	            
+	                    
+	                }
+	                if(col>cmax){
+	                    cmax=col;
+	                }
+	            }
+	            
+	        
+	        System.out.println(cmax+" "+rmax);
+	        
+}  
+	        
+	
+}
+	
+
+	
+		
+	
+	
+
+		
+
