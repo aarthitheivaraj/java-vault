@@ -1,0 +1,222 @@
+1. perfect number
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();
+		int sum=0;
+		for(int i=1;i<=a/2;i++){
+		    if(a%i==0){
+		        sum=sum+i;
+		    }
+		}
+		System.out.println((sum==a)?"perfect":"not perfect");
+		    }
+		}
+2.fibinocii
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();
+		int x=0;
+		int y=1;
+		System.out.print(x+" "+y+" ");
+		for(int i=1;i<=a-1;i++){
+		    int s=x+y;
+		    System.out.println(s+" ");
+		    x=y;
+		    y=s;
+		}
+		    }
+		}
+3.pattern
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();
+		
+		for(int row=0;row<=a-1;row++){
+		    for(int col=0;col<=a-row-1;col++){
+		        System.out.print(" ");
+		    }
+		    for(int col=0;col<=row;col++){
+		        System.out.print("*  ");
+		        
+		    }
+		    System.out.println();
+		    
+		    }
+		}
+}
+
+4. square shape pattern
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int size=sc.nextInt();
+	    for(int row=0;row<size;row++){
+	        for(int col=0;col<size;col++){
+	            if(row==0||row==size-1||col==0||col==size-1){
+	                System.out.print("* ");
+	            }
+	            else{
+	                System.out.print("  ");
+	            }
+	            
+	            }
+	            System.out.println();
+	            }
+	        }
+	    }
+	
+5. triangle shape pattern
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int size=sc.nextInt();
+	    for(int row=0;row<size;row++){
+	        for(int col=0;col<size;col++){
+	            if(row==size-1||col==0||col==row){
+	                System.out.print("* ");
+	            }
+	            else{
+	                System.out.print("  ");
+	            }
+	            
+	            }
+	            System.out.println();
+	            }
+	        }
+	    }
+	
+6. right side triangle pattern
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int size=sc.nextInt();
+	    for(int row=0;row<size;row++){
+	        for(int col=0;col<size;col++){
+	            if(row==size-1||col==size-1||col+row==size-1){
+	                System.out.print("* ");
+	            }
+	            else{
+	                System.out.print("  ");
+	            }
+	            
+	            }
+	            System.out.println();
+	            }
+	        }
+	    }
+	
+7. M shape pattern
+
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int size=sc.nextInt();
+	    for(int row=0;row<size;row++){
+	        for(int col=0;col<size;col++){
+	            if(col==0||col==size-1||(col==row&&row<=size/2)||(col+row==size-1&&row<=size/2)){
+	                System.out.print("* ");
+	            }
+	            else{
+	                System.out.print("  ");
+	            }
+	            
+	            }
+	            System.out.println();
+	            }
+	        }
+	    }
+	
+8. K shape pattern
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int size=sc.nextInt();
+	    for(int row=0;row<size;row++){
+	        for(int col=0;col<size;col++){
+	            if(col==0||row<=size/2&&col+row==size/2||(row>size/2&&row-col==size/2)){
+	                System.out.print("* ");
+	            }
+	            else{
+	                System.out.print("  ");
+	            }
+	            
+	            }
+	            System.out.println();
+	            }
+	        }
+	    }
+	
+9.adding first two digit and last two digit
+
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		int a=scan.nextInt();
+		if(a<999){
+		    System.out.println("Invalid");
+		    
+		}
+		else{
+		    int last=a%100;
+		    int first=a;
+		    while(first>99){
+		        first=first/10;
+		        
+		    }
+		    System.out.println(last+first);
+		    
+		}
+	}
+} 
+10. using array finding maximum value
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		int arr[]={12,34,56,23};
+		int max=arr[0];
+		
+		for(int i=0;i<arr.length;i++){
+		    if(arr[i]>max){
+		        max=arr[i];
+		    }
+		}
+		        System.out.print(max);
+		    
+		    
+		
+}
+}
+    
