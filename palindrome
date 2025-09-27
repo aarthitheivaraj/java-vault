@@ -1,0 +1,35 @@
+1. palindrome
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	  Scanner scan=new Scanner(System.in);
+	   int a=scan.nextInt();
+	   int rev=0;
+	   int n;
+	   while(a>0){
+	       n=a%10;
+	       rev=rev*10+n;
+	       a=a/10;
+	   }
+	       System.out.println(rev);
+	       
+	
+	   if(a==rev)
+	   {
+	    System.out.println("palindrome");
+	          
+	   }
+	   else{
+	       System.out.println("not a palindrome");
+	       
+	   
+	}
+	}
+}
+
+    
+
+
+
