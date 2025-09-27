@@ -1,0 +1,17 @@
+1.perfect square root
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		int n = scan.nextInt();
+		for(int i=1;i<=n/2;i++){
+		    if(i*i==n){
+		        System.out.print(i);
+		        break;
+		    }
+		}
+		    }
+		}
+    
